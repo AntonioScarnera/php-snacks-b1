@@ -48,24 +48,24 @@ $posts = [
     '10/01/2019' => [
         [
             'title' => 'Post 1',
-            'author' => 'Michele Papagni',
+            'author' => 'Happy Hippo',
             'text' => 'Testo post 1'
         ],
         [
             'title' => 'Post 2',
-            'author' => 'Michele Papagni',
+            'author' => 'Happy Hippo',
             'text' => 'Testo post 2'
         ],
     ],
     '10/02/2019' => [
         [
             'title' => 'Post 3',
-            'author' => 'Michele Papagni',
+            'author' => 'Happy Hippo',
             'text' => 'Testo post 3'
         ],
         [
             'title' => 'Post 4',
-            'author' => 'Michele Papagni',
+            'author' => 'Happy Hippo',
             'text' => 'Testo post 4'
         ] 
     ],
@@ -73,12 +73,12 @@ $posts = [
         
         [
             'title' => 'Post 5',
-            'author' => 'Michele Papagni',
+            'author' => 'Happy Hippo',
             'text' => 'Testo post 5'
         ],
         [
             'title' => 'Post 6',
-            'author' => 'Michele Papagni',
+            'author' => 'Happy Hippo',
             'text' => 'Testo post 6'
         ]
     ],
@@ -193,11 +193,32 @@ $posts = [
         
         <h1> Snack 4 </h1>
         <!-- inserire qui il codice dello snack (aprire i tag php se necessario) -->
+
+        <?php
+            $nums = [];
+            while(count($nums) < 15){
+                $randNum = rand(1, 100);
+                array_push($nums, $randNum);
+                
+            }
+            for($a = 0; $a < 15; $a++)
+            echo "{$nums[$a]}<br>";
+        ?>
+
     </section>
     <section id="snack5">
         
         <h1> Snack 5 </h1>
         <!-- inserire qui il codice dello snack (aprire i tag php se necessario) -->
+
+        <?php
+        $paragraph = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nobis, dolor ducimus ab ad sed, veritatis aperiam perferendis impedit dignissimos atque veniam autem modi, doloremque at deleniti beatae inventore laboriosam magnam. Sed libero delectus optio eos molestias eum doloribus veniam aliquid nobis quas, accusamus alias maxime in tenetur fuga ea';
+        $paragraphExploded = explode(".", $paragraph);
+            
+        for($b = 0; $b < count($paragraphExploded); $b++)
+        echo "{$paragraphExploded[$b]}.<br>";
+        ?>
+        
     </section>
     <section id="snack6">
         
