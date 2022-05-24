@@ -62,15 +62,14 @@ $posts = [
             'title' => 'Post 3',
             'author' => 'Happy Hippo',
             'text' => 'Testo post 3'
-        ],
+        ]
+    ],
+    '15/05/2019' => [
         [
             'title' => 'Post 4',
             'author' => 'Happy Hippo',
             'text' => 'Testo post 4'
-        ] 
-    ],
-    '15/05/2019' => [
-        
+        ], 
         [
             'title' => 'Post 5',
             'author' => 'Happy Hippo',
@@ -163,27 +162,16 @@ $posts = [
         <!-- inserire qui il codice dello snack (aprire i tag php se necessario) -->
 
         <?php
-            $arrayKey = array_keys($posts);
-            for($x=0; $x < count($arrayKey); $x++){
-                $date = $arrayKey;
-                $dateValue = $date[$x];
-                echo "{$dateValue}<br>";
 
-                /*
-                foreach($posts as $dateValue => $val){
-                    $key = array_keys($val);
-                    for($y = 0; $y < count($key); $y++){
-                        echo "{$val[$y]['title']}<br>
-                        {$val[$y]['author']}<br>
-                        {$val[$y]['text']}<br><br>";
+            foreach($posts as $key => $value){
+                echo "<h4>{$key}</h4>";
+                foreach($value as $item){
+                    echo "<ul>";
+                    foreach($item as $val){
+                        echo "<li>{$val}</li>";
                     }
+                    echo "</ul>";
                 }
-                */
-
-                for($y = 0; $y < 2; $y++){
-                    echo "{$posts[$dateValue][$y]['title']}<br>{$posts[$dateValue][$y]['author']}<br>{$posts[$dateValue][$y]['text']}<br><br>";
-                }
-               
             }
 
         ?>
